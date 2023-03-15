@@ -1,8 +1,8 @@
-**-function**
+**function**
     A JavaScript function is a block of code designed to perform a particular task.
 
-**-Define function**
--To define function in JS ```function``` keyword is used.
+**Define function**
+    -To define function in JS ```function``` keyword is used.
 ```
 function normalSqure(x) {
     return x*x;
