@@ -12,6 +12,7 @@ function normalSqure(x) {
 ```
 squre(2)
 ```
+
 **# ways to write function in JS**
 1) normal fucntion
 ```
@@ -36,6 +37,7 @@ const squre = x => x*x;
 const printName = () => console.log("your name");
 // If you don't write round brackets then it will show the error: [Uncaught SyntaxError: Unexpected token '=>']
 ```
+
 **Parameter passing**
 -In JS parameterss are passed by value.
 -If value of global variable change inside the function change wont affect globaly. It only resides in function.
