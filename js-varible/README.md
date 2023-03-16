@@ -25,3 +25,5 @@
 * **scope**: const is global and block scope.
 * **declaration**: const can not be redeclared. We have to initialize at the time of delcaration other wise it will thorw an error.
 * **upadte**: const can not be update.
+
+[more about js variable scope](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
