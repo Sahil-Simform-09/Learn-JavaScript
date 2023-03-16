@@ -1,8 +1,8 @@
 **function**
-    A JavaScript function is a block of code designed to perform a particular task.
+ -A JavaScript function is a block of code designed to perform a particular task.
 
 **Define function**
-    -To define function in JS ```function``` keyword is used.
+ -To define function in JS ```function``` keyword is used.
 ```
 function normalSqure(x) {
     return x*x;
@@ -77,18 +77,18 @@ names("sahil", "Mistry");
 
 **bind(), apply(), call() methods**
 1) bind()
-    -bind, creates new function and takes first argument as this value.
+-bind, creates new function and takes first argument as this value.
     ```
     const bindMethod = about.bind(name1, "dharanagar", "valsad");
     console.log(bindMethod()); //Sahil Mistry dharanagar valsad
     ```
 1) call()
-    -call, It call the function and takes first argument as this value.
+-call, It call the function and takes first argument as this value.
     ```
     about.call(name1, "dharanagar", "valsad"); //Sahil Mistry dharanagar valsad
     ```
 2) apply()
-    -apply, It call the fucntion and takes first argument as this value and other arugment it take as array.
+-apply, It call the fucntion and takes first argument as this value and other arugment it take as array.
     ```
     const bindMethod = about.bind(name1, "dharanagar", "valsad");
     console.log(bindMethod()); //Sahil Mistry dharanagar valsad
