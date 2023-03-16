@@ -25,22 +25,3 @@
 * **scope**: const is global and block scope.
 * **declaration**: const can not be redeclared. We have to initialize at the time of delcaration other wise it will thorw an error.
 * **upadte**: const can not be update.
-
-##### datatypes
-* JavaScript has 8 Datatypes
-    1) String
-    2) Number
-    3) Bigint (used seldom)
-    4) Boolean
-    5) Undefined
-    6) Null
-    7) Symbol (used seldom)
-    8) Object
-
-    The Object Datatype
-    The object data type can contain:
-
-    1) An object
-    2) An array
-    3) A date
-* [difference between null and undefined in javascript](https://www.scaler.com/topics/javascript/null-and-undefined-in-javascript/)
