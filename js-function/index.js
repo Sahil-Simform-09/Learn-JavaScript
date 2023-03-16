@@ -47,11 +47,11 @@ add(x)
 
 //function hoisting
 //calling fucntion
-// hoist();
-//normal fucntion can hoisted
-// function hoist() {
-//     console.log("This function is hoisted");
-// }
+hoist();
+normal fucntion can hoisted
+function hoist() {
+    console.log("This function is hoisted");
+}
 //expression & arrow fucntion can not hoisted  [Uncaught ReferenceError: Cannot access 'hoist' before initialization]
 const hoist =  function() {
     console.log("his function is hoisted");
