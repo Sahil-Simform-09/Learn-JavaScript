@@ -8,6 +8,7 @@
 * To add JavaScript HTML ```<script></script>``` tag is used.
 * Scripts can be placed in the <body>, or in the <head> section of an HTML page.
 * JS code can we written inside script or external JavaScript file can used.
+    
     index.html
     ```
     <!DOCTYPE html>
