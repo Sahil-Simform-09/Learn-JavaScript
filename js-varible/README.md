@@ -7,24 +7,24 @@
     3) using const
     4) using nothing
 
-1) using var:
+**1) using var**:
 * var keyword is used to created variable.
-* scope: var is global  and fucntional scope. It is not block scope. If we delcare var inside {} it can access outside the {} but if we declare inside ```function func() {}``` It can not outside the fucntion.
+* **scope**: var is global  and fucntional scope. It is not block scope. If we delcare var inside {} it can access outside the {} but if we declare inside ```function func() {}``` It can not outside the fucntion.
     * block scope means, Everthing inside {} brackets has global scope.
-* declaration: var can redeclared.
-* upadte: var can be update.
+* **declaration**: var can redeclared.
+* **upadte**: var can be update.
 
-2) using let:
+**2) using let**:
 * let keyword is used to created variable.
-* scope: let is global and block scope.
-* declaration: let can not be redeclared.
-* upadte: ley can be update.
+* **scope**: let is global and block scope.
+* **declaration**: let can not be redeclared.
+* **upadte**: ley can be update.
 
-3) using let:
+**3) using let**:
 * const keyword is used to created variable.
-* scope: const is global and block scope.
-* declaration: const can not be redeclared. We have to initialize at the time of delcaration other wise it will thorw an error.
-* upadte: const can not be update.
+* **scope**: const is global and block scope.
+* **declaration**: const can not be redeclared. We have to initialize at the time of delcaration other wise it will thorw an error.
+* **upadte**: const can not be update.
 
 ##### datatypes
 * JavaScript has 8 Datatypes
