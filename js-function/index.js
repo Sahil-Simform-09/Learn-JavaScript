@@ -90,13 +90,15 @@ const name2 = {
 const about = function(street, district) {
     console.log(this.firstName + " " + this.lastname + " " + street + " " + district);
 }
+about("Dfd", "Ferf");
+
 //call, It call the function and takes first argument as this value
 about.call(name1, "dharanagar", "valsad"); //Sahil Mistry dharanagar valsad
 
+const arr = ["kanakriya", "Ahmedabad"];
 //apply, It call the fucntion and takes first argument as this value and other arugment it take as array
-about.apply(name2, ["kanakriya", "Ahmedabad"]); //Krishna Mistry kanakriya Ahmedabad
+about.apply(name2, arr); //Krishna Mistry kanakriya Ahmedabad
 
 //bind, creates new function and takes first argument as this value
 const bindMethod = about.bind(name1, "dharanagar", "valsad");
 console.log(bindMethod()); //Sahil Mistry dharanagar valsad
-
