@@ -63,7 +63,7 @@ const user1 = {
 }
 ```
 * Here in both cases this will refer window object.
-* Rule to finding out what ```this``` is inside the arrow function.**It has to see what is the value of ``this``` in the surrounding**
+* Rule to finding out what ```this``` is inside the arrow function.**It has to see what is the value of ``this``` in the surrounding scope where function expression is**
 ### Parameter passing
 * In JS parameterss are passed by value.
 * If value of global variable change inside the function change wont affect globaly. It only resides in function.
