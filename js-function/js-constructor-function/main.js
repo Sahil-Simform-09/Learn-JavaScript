@@ -4,43 +4,38 @@ function User(name, age) {
     return this.name;
 }
 
-
 // create user1 & user2 objects
 const user1 = User("Sahil", 21);
-// const user2 = new User("Krishna");
+const user2 = User("Krishna", 24);
 console.log(user1);
-
-const name1 = User("df", 21);
-console.log(name1);
-
+console.log(user2);
 
 //task 1 
 const obj = {};
 
-function A() { return obj; };
-function B() { return obj; };
+function First() { return obj; };
+function Second() { return obj; };
 
-let a = new A();
-let b = new B();
+let firstObj = new First();
+let SecondObj = new Second();
 
-console.log( a === b ); // true
-console.log( a == b ); // true
+console.log(firstObj === SecondObj); // true
+console.log(firstObj ==  SecondObj); // true
 
 //task 2
 function Calculator() {
-    let a, b;
     this.read = function() {
-        a = Number(prompt("first value"));
-        b = Number(prompt("second value"));
+        this.firstValue = Number(prompt("first value"));
+        this.secondValue = Number(prompt("second value"));
     }
     this.sum = function() {
-        return a+b;
+        return firstValue+secondValue;
     }
     this.mul = function() {
-        return a*b;
+        return firstValue*secondValue;
     }
 } 
-let calculator = new Calculator();
+const calculator = new Calculator();
 calculator.read();
 
 alert( "Sum=" + calculator.sum() );
