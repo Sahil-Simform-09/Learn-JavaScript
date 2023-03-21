@@ -23,6 +23,38 @@ console.log(expressionSqure(2));
 console.log(arrowSqure(2));
 printName();
 
+//how  this works inside arrow function 
+const user = {
+    fName: "Sahil",
+    lName: "Mistry",
+    getName: function() {
+        console.log(this.fName + " " + this.lName); // sahil Mistry
+    },
+    arrowGetName: () => {
+        console.log(this.fName + " " + this.lName); // undefiend undefiend
+    }
+}
+const user1 = {
+    fName: "Krishna",
+    fullName: this.fName + " " + "Mistry", // undefiend Mistry
+    arrowFullName: () => {
+        console.log(this.fName + " " + "Mistry"); // undefiend Mistry
+    }
+}
+const fruit = {
+    fruit: ["Banana", "Apple", "Mango"],
+    myName: "Sahil",
+    fruitMyName: function(){
+        const lName = "grt";
+        const newArray = this.fruit.map((item) => {
+            return item + "-" + this.myName;
+        });
+        console.log(newArray);
+        return newArray;
+    }
+}
+const myArray = fruit.fruitMyName();
+
 
 //parameters pass by value
 let x = 10;
@@ -35,20 +67,20 @@ console.log("val of x outside of function", x); // val of x wont change bcz it i
 const obj = {
     x: 10
 }
-const add = x => {
+const add1 = x => {
     x += 5;
     console.log(x);
 }
 console.log(obj.x); // val of x will change bcz obj is pass as copy of refernece.
 
 //calling function
-add(x)
-
+add(x);
+add1(x);
 
 //function hoisting
 //calling fucntion
 hoist();
-normal fucntion can hoisted
+//normal fucntion can hoisted
 function hoist() {
     console.log("This function is hoisted");
 }
@@ -72,11 +104,11 @@ names("sahil", "Mistry");
 
 //default parameter
 //we can put default value for parameter
-const add = (x, y = 5) => {
+const add2 = (x, y = 5) => {
     return x+y;
 }
-console.log(add(5)); //10
-console.log(add(5, 10)); //15, Here it will not take default value.
+console.log(add2(5)); //10
+console.log(add2(5, 10)); //15, Here it will not take default value.
 
 //call, apply, bind
 const name1 = {

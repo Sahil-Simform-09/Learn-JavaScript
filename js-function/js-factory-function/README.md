@@ -1,7 +1,7 @@
 # JavaScript Factory Function.
-* In JavaScript, a constructor function is used to create objects.
+* In JavaScript, a factory function is used to create objects.
 * It helps to reduce code duplication.
-* creation of constructor function.
+* creation of factory function.
 ```
 function personFactory(name) {
     this.getName = function() {
