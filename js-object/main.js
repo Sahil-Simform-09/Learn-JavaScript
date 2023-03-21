@@ -1,4 +1,3 @@
-
 let language = "secondLanguage";
 const student = {
     fName: "Sahil",
