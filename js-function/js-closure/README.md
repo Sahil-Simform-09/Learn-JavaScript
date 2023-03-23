@@ -30,6 +30,7 @@ function getName() {
 var fullName = getName();
 console.log(fullName()); // Sahil Mistry
  ```
+ ![image](https://user-images.githubusercontent.com/124886751/227216857-f6810154-ce29-4c21-9ab9-c01bc22ef05d.png)
 1) In Above Exmaple getName and fullName is declared in global execution contex at memorey allocation time. At code execution time Content of fullname is function defination(getFullName) with clousre. Closure contains variables are in scope. Here ```fName```.
     In easy we can say that when ```getName``` function is invoked it will return ```getFullName``` function defination and also  **closure**, Like container with variables that were in scope when it's created.
 2) Therefore when ```fullName``` function is invkoed it has access tio ```fName``` variable even if local execution context of ```getName``` is closed and all variables inside that local contex is killed.
