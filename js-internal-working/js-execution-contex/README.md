@@ -1,4 +1,4 @@
-# JavaScrip execution contex.
+# JavaScript execution contex.
 ### How JavaScript Code Gets Executed
 * The browser doesn't directly understand high-level JavaScript code. It needs to converted into a format that hte browser can understand.          
 When browser encounters JavaScript code it sends it to its JavaScript engine. Then browser js engine creates an environment known as **Execution contex**.      Execution context contains code currently running.
