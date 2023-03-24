@@ -2,7 +2,7 @@
 * A closure is combination of function bundeed togehter with refers to its lexical environment. we can say that, the function defiend in the closure **'remembers' the environment in which it was created.** 
 * The closure is a collection of all the variables in scope at the time of creation of the function.
 * **scope** means where you can access a specific variable or function in our code.
-* To understand closure first understand execution contex. [Read here about execution contex]()
+* To understand closure first understand execution contex. [Read here about execution contex](https://github.com/Sahil-Simform-09/learn-js/blob/developer/js-internal-working/js-execution-contex/README.md)
 * A new Lexical Environment is created each time such code is evaluated. **lexical environment** is local memory along with it's  parent's **lexical environment**.
     * In short, every execution context has a Lexical Environment. This Lexical environments holds variables and their associated values, and also has a reference to its outer environment.
     * Abstractly, the environment looks like this in pseudocode:
