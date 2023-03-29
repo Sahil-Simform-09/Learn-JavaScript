@@ -3,7 +3,9 @@
 * when a web page is loaded, the browser creates a Document Object Model of the page.
 The HTML DOM model is constructed as a tree of Objects:The HTML DOM Tree of Objects
 DOM HTML tree.
-*** here add DOM IMAGE ***
+
+![image](https://user-images.githubusercontent.com/124886751/228510643-7f04dd61-01f9-4bed-9a32-db9702ea2070.png)
+
 ### difference between ```append()``` and ```appendChild()```
 * First difference is that, using ```append()``` we can add string inside an element as well as an HTML element while using ```appendChild()``` we can only an HTML element.
 * second difference is that, using ```append()``` we can append more than one HTML element while using ```appendChild()``` we can append only one HTML element.
@@ -21,4 +23,5 @@ DOM HTML tree.
         console.log("I'm textContent", div.textContent);
     </script>
 ```
-*** add image here from github ***
+
+![Screenshot from 2023-03-29 15-25-02](https://user-images.githubusercontent.com/124886751/228511488-d06e974a-ed46-4ec4-9b8a-1e07d76704ac.png)
