@@ -3,7 +3,7 @@
 * Propagation refers to how events travel through the Document Object Model (DOM) tree. The DOM tree is the structure which contains parent/child/sibling elements in relation to each other. You can think of propagation as electricity running through a wire, until it reaches its destination. The event needs to pass through every node on the DOM until it reaches the end, or if it is forcibly stopped.
 * If there are nested elements in HTML and event occurs in child it will also propgate to it's parent.              
 Ex. There are 3 ```div``` in HTML one inside annother 
-// image
+
 ```
     <div id="first">
         <div id="second">
