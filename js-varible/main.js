@@ -40,3 +40,13 @@ console.log(num2); // It will trow error.
 console.log(num3); // It will trow error.
 const num1 = 20 // It will trow error.
 num1 = 30 // It will trow error.
+
+//hoisting
+console.log(fName); // undefiend
+var fName = "Sahil";
+
+console.log(mName); // refernce error
+let mName = "Paresh";
+
+console.log(lName); // reference error
+const lName = "Mistry"

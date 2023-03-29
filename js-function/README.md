@@ -106,12 +106,12 @@ names("sahil", "Mistry");
 ```
 
 ### bind(), apply(), call() methods
-1) bind()
-* bind, creates new function and takes first argument as this value.
-    ```
-    const bindMethod = about.bind(name1, "dharanagar", "valsad");
-    console.log(bindMethod()); //Sahil Mistry dharanagar valsad
-    ```
+```
+const name1 = {
+    firstName: "Sahil",
+    lastname: "Mistry"
+}
+```
 1) call()
 * call, It call the function and takes first argument as this value.
     ```
@@ -123,3 +123,76 @@ names("sahil", "Mistry");
     const bindMethod = about.bind(name1, "dharanagar", "valsad");
     console.log(bindMethod()); //Sahil Mistry dharanagar valsad
     ```
+3) bind()
+* With the ```bind()``` method, an object can borrow a method from another object or a function. The ```bind()``` takes an object as an argument and returns a new function whose this refers to the object we passed as an argument..
+```
+const bindMethod = about.bind(name1, "dharanagar", "valsad");
+console.log(bindMethod()); //Sahil Mistry dharanagar valsad
+```
+**Creating your own bind() (Polyfill of bind)**         
+What is polyfill?
+Polyfill is a fallback for a method that is not supported by the browser by default.            
+Create your own ```bind()``` method.
+1) Create an object with ```myObj()``` name and function with ```myBind()``` name   which will work as ```bind()``` method for us and add ```myBind()``` to function prototype.
+2) ```bind()``` always return a function, for that return a function from ```myBind()```
+
+    ```
+    const myObj = {
+        fName: "Sahil",
+    }   
+    function getName() {
+        console.log(this.fName);
+    }
+    Function.prototype.myBind = function(myObj) {
+        let referdObj = this; // this will refer to getName()
+        return function() {
+            referdObj.apply(myObj); // invoke getName()
+        }
+    }
+    const bindName = getName.myBind(myObj);
+    bindName(); // Sahil
+    ```
+3) ```bind()``` method also accept arguments, here in our implementation of ```myBind()``` if we try to pass arguments to ```myBind()``` then it'll will give undefiend.
+    
+    ```
+    function getName(lName) {
+        console.log(this.fName + " " + lName);
+    }
+    const bindName = getName.myBind(myObj, "Mistry");
+    bindName(); // Sahil undefiend
+    ```
+
+    To resolve this problem we need to pass argument to our ```myBind()``` method.
+    
+        
+        Function.prototype.myBind = function(myObj, ...args1) {
+            let referdObj = this; // this will refer to getName()
+            return function() {
+                referdObj.apply(myObj, args1); // invoke getName()
+            }
+        }   
+        const bindName = getName.myBind(myObj, "Mistry");
+        bindName(); // Sahil Mistry
+        
+4) Now our ```myBind()``` method is working perfectly. But there is last problem which is, when we try to pass parameter to ```bindName()``` then it'll print undefiend.
+
+    ```
+    function getName(lName, district) {
+        console.log(this.fName + " " + lName + " " + district);
+    }
+    bindName("Valsad"); // Sahil Mistry undefiend
+    ```
+
+    To resolve the problem we have to pass argument while returning function from ```myBind()```
+
+    ```
+    Function.prototype.myBind = function(myObj, ...args1) {
+        let referdObj = this; // this will refer to getName()
+        return function(...args2) {
+            referdObj.apply(myObj, [...args1, ...args2]); // invoke getName()
+        }
+    }  
+    bindName("Valsad"); // Sahil Mistry Valsad
+    ```
+5) Now our ```myBind()``` will work same as ```bind()```. We can use this method.
+[learn more about spread and rest operator]()

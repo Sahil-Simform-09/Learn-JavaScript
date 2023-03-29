@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{   
+            min-height: 100px;
+            min-width: 100px;
+            padding: 30px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- event propogation -->
+    <div id="first"> first element
+        <div id="second"> second element
+            <div id="third">  element
+            </div>
+        </div>
+    </div>
+    <!-- event deligation -->
+    <!-- <ul>
+        <li id="laptop">laptop</li>
+        <li id="phone">phone</li>
+        <li id="smartWatch">smartWatch</li>
+    </ul> -->
+    <script src="./main.js"></script>
+</body>
+</html>
