@@ -11,12 +11,14 @@ Ex. There are 3 ```div``` in HTML one inside annother
         </div>
     </div> 
 ```
+![Screenshot from 2023-03-28 18-23-38](https://user-images.githubusercontent.com/124886751/228512955-6c359c40-1738-4fdf-bfa0-75514172d12d.png)
+
 * When event occurs on third element then it will propogate to it's parent, here third element gets click event then first and second also get the click event beacause of event propogation.
 * Event propogate to parent sometimes it'll overheard. To resolve that we can stop event propogation using ```Event.stopPropagation()``` method. This method will stop propogation of event from current element.
 ### Event Bubbling and Capturing
 * In their simplest definitions, bubbling travels from the target to the root, and capturing travels from the root to the target.  
 * target is the DOM node on which you click, or trigger with any other event.For example, a button with a click event would be the event target.          
-The root is the highest-level parent of the target. This is usually the document, which is a parent of the , which is a (possibly distant) parent of your target element.
+* The root is the highest-level parent of the target. This is usually the document, which is a parent of the , which is a (possibly distant) parent of your target element.
 * Ex. In above example,         
 For bubbling            
     * If we handle 'click' event for our ```div``` elements then first #third element will get event after that #second and then #fist.
