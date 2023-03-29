@@ -134,3 +134,20 @@ about.apply(name2, arr); //Krishna Mistry kanakriya Ahmedabad
 //bind, creates new function and takes first argument as this value
 const bindMethod = about.bind(name1, "dharanagar", "valsad");
 console.log(bindMethod()); //Sahil Mistry dharanagar valsad
+
+//pollyfill for bind
+const myObj = {
+    fName: "Sahil",
+}
+function getName(lName, street, district) {
+    console.log(this.fName + " " + lName + " " + street + " " + district);
+}
+Function.prototype.myBind = function(myObj, ...args) {
+    let referdObj = this;
+    return function(...args2) {
+        console.log(args);
+        referdObj.apply(myObj, [...args, ...args2]);
+    }
+}
+const bindName = getName.myBind(myObj,"Mistry", "Dharanager");
+bindName("Valsad");
