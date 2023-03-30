@@ -223,3 +223,14 @@ Create your own ```bind()``` method.
     ```
 5) Now our ```myBind()``` will work same as ```bind()```. We can use this method.
 [learn more about spread and rest operator]()
+### IIFE function
+* An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+```
+(function () {
+  // …
+})();
+
+(() => {
+  // …
+})();
+```
