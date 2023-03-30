@@ -129,8 +129,35 @@ const name1 = {
 const bindMethod = about.bind(name1, "dharanagar", "valsad");
 console.log(bindMethod()); //Sahil Mistry dharanagar valsad
 ```
+* Sometimes the ```bind()``` method has to be used to prevent losing this.
+* Ex.
+
+```
+const user = {
+  fName:"Sahil",
+  getName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+setTimeout(user.getName, 3000);
+```
+* Here **undefiend undefiend**  will printed because ```setTimeout``` is webAPI therefore it will go into the webAPI after completing 3 seconds it'll goes to event and queue at that time event loop will check that call stack is empty or not. 
+* task in event queue added to call stack when call stack is empty. When call is empty **user** object will also removed therefore when ```getName()``` gets invoked at that time this will refer to window object.
+* To solve this problem ```bind()``` is used.
+* Every function has the method ```bind()``` , which returns a new function with this bound to a value. The function has exactly the same behavior as the one you called .bind on, only that this was set by you. **No matter how or when that function is called, this will always refer to the passed value.**
+
+```
+const user = {
+  fName:"Sahil",
+  getName: function () {
+    return this.fName;
+  }
+}
+const getBindName = user.getName.bind(user);
+setTimeout(getBindName , 3000);
+```
 **Creating your own bind() (Polyfill of bind)**         
-What is polyfill?
+What is polyfill?       
 Polyfill is a fallback for a method that is not supported by the browser by default.            
 Create your own ```bind()``` method.
 1) Create an object with ```myObj()``` name and function with ```myBind()``` name   which will work as ```bind()``` method for us and add ```myBind()``` to function prototype.
