@@ -141,8 +141,7 @@ const user = {
 }
 setTimeout(user.getName, 3000);
 ```
-* Here **undefiend undefiend**  will printed because ```setTimeout``` is webAPI therefore it will go into the webAPI after completing 3 seconds it'll goes to event and queue at that time event loop will check that call stack is empty or not. 
-* task in event queue added to call stack when call stack is empty. When call is empty **user** object will also removed therefore when ```getName()``` gets invoked at that time this will refer to window object.
+* Here **undefiend undefiend**  will printed because ```getName()``` function will be pass as callback function and callback function work as normal function it is not method and ```this``` inside normal function always refer global object (Window) [refer about this here](https://github.com/Sahil-Simform-09/learn-js/tree/main/js-this)
 * To solve this problem ```bind()``` is used.
 * Every function has the method ```bind()``` , which returns a new function with this bound to a value. The function has exactly the same behavior as the one you called .bind on, only that this was set by you. **No matter how or when that function is called, this will always refer to the passed value.**
 
