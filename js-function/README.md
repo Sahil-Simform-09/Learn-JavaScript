@@ -129,8 +129,34 @@ const name1 = {
 const bindMethod = about.bind(name1, "dharanagar", "valsad");
 console.log(bindMethod()); //Sahil Mistry dharanagar valsad
 ```
+* Sometimes the ```bind()``` method has to be used to prevent losing this.
+* Ex.
+
+```
+const user = {
+  fName:"Sahil",
+  getName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+setTimeout(user.getName, 3000);
+```
+* Here **undefiend undefiend**  will printed because ```getName()``` function will be pass as callback function and callback function work as normal function it is not method and ```this``` inside normal function always refer global object (Window) [refer about this here](https://github.com/Sahil-Simform-09/learn-js/tree/main/js-this)
+* To solve this problem ```bind()``` is used.
+* Every function has the method ```bind()``` , which returns a new function with this bound to a value. The function has exactly the same behavior as the one you called .bind on, only that this was set by you. **No matter how or when that function is called, this will always refer to the passed value.**
+
+```
+const user = {
+  fName:"Sahil",
+  getName: function () {
+    return this.fName;
+  }
+}
+const getBindName = user.getName.bind(user);
+setTimeout(getBindName , 3000);
+```
 **Creating your own bind() (Polyfill of bind)**         
-What is polyfill?
+What is polyfill?       
 Polyfill is a fallback for a method that is not supported by the browser by default.            
 Create your own ```bind()``` method.
 1) Create an object with ```myObj()``` name and function with ```myBind()``` name   which will work as ```bind()``` method for us and add ```myBind()``` to function prototype.
@@ -196,3 +222,14 @@ Create your own ```bind()``` method.
     ```
 5) Now our ```myBind()``` will work same as ```bind()```. We can use this method.
 [learn more about spread and rest operator]()
+### IIFE function
+* An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+```
+(function () {
+  // …
+})();
+
+(() => {
+  // …
+})();
+```

@@ -55,7 +55,6 @@ const fruit = {
 }
 const myArray = fruit.fruitMyName();
 
-
 //parameters pass by value
 let x = 10;
 const add = x => {
@@ -151,3 +150,21 @@ Function.prototype.myBind = function(myObj, ...args) {
 }
 const bindName = getName.myBind(myObj,"Mistry", "Dharanager");
 bindName("Valsad");
+
+// bind resolve this problem
+var user2 = {
+    fName:"Sahil",
+    getName: function () {
+     console.log(this.fName);
+    }
+};
+var getBindName = user2.getName.bind(user2);
+setTimeout(getBindName , 5000);
+
+// IIFE function
+(function (){
+    console.log("hello IIFE function");
+})();
+(() => {
+    console.log("hello arrow IIFE function");
+})();
