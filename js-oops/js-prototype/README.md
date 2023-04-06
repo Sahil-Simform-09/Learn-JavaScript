@@ -21,7 +21,7 @@
     ```
 * Here ```talk()``` method is attached to this variable therefore when we create object from Constructor function it will always add ```talk()``` method to every new object. 
 * ```eat()``` method is attached to **Person constructor** threfore when we create object from Constructor function ```eat()``` method will not attached with every object instead of ```eat()``` method is inherited from  **Person constructor**.
-*  **add image here on github**
+    ![Screenshot from 2023-04-06 12-25-16](https://user-images.githubusercontent.com/124886751/230322232-d4133069-5e77-42f3-841f-de8eba5ec0c8.png)
 ### Prototype chaining
 * Prototype chaining in JavaScript is the process by which an object's prototype is searched for a property or method when it is not found on the object itself. When an object is created, it is linked to a prototype object, and this prototype object itself can have its own prototype, creating a chain of objects that are searched for a particular property or method.
 * **Example**
@@ -48,10 +48,10 @@
     b1.speak();
     b2.speak();
     ```
-* **add image here on github**
+    ![Screenshot from 2023-04-06 12-14-36](https://user-images.githubusercontent.com/124886751/230321644-a12b767b-5857-409e-8ca4-f8e0bf594dd8.png)
+
 ### 3 way to achieve prototypel inheritance
 1) Using constructor function
 2) Using class
 3) Using Object.cerate method()     
 [for implementation refer here]()       
-* 
