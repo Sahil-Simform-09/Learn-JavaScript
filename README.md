@@ -21,3 +21,5 @@
 * **oops**        
     * [objects](https://github.com/Sahil-Simform-09/learn-js/tree/developer/js-oops/js-object)            
     * [prototype](https://github.com/Sahil-Simform-09/learn-js/tree/developer/js-oops/js-prototype)
+* **miscellaneous topics in JavaScript**
+    * [iterable and enumerable](https://github.com/Sahil-Simform-09/learn-js/tree/developer/js-miscellaneous/js-iterable-enumerable)
