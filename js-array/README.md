@@ -51,3 +51,5 @@ compare(9, 2)
 9-2 = 7 which is positive value.
 sort function will sort that 2 comes first and 9 after.
 ```
+### important links
+* **Rest vs Spread Operator:** [refer here](https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/)

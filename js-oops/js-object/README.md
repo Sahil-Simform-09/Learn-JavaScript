@@ -4,12 +4,23 @@
 * The key of a property can be a string. And the value of a property can be any value, e.g., a string, a number, an array, and even a function.
 
 ### object creation
-* JavaScript provides you with many ways to create an object. The most commonly used one is to use the object literal notation.
-``` 
-const student = {
-    fName: "Sahil"
-}
-```
+1) The most commonly used one is to use the **object literal notation.**
+    ``` 
+    const student = {
+        fName: "Sahil"
+    }
+    ```
+2) [Using a constructor function](https://github.com/Sahil-Simform-09/learn-js/tree/main/js-function/js-constructor-function)
+3) [Using a factory function](https://github.com/Sahil-Simform-09/learn-js/tree/main/js-function/js-factory-function)
+4) Using **Object.create()** method     
+    ```
+    const student = {
+        fName: "Sahil",
+        getName() {
+            console.log(this.fName);
+        }
+    }
+    ```
 ###  properties Access
 * You can access a property of an object by its property name. Property accessors come in two syntaxes: dot notation and bracket notation.
 ``` 
