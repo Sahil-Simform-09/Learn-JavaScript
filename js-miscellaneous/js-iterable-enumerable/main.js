@@ -37,7 +37,32 @@ const myIterableObject = {
 for(let val of myIterableObject) {
     console.log(val); 
 }
-/* console will print value of all key present in object
- Sahil 
- Mistry 
- 21  */
+// /* console will print value of all key present in object
+//  Sahil 
+//  Mistry 
+//  21  */
+
+
+const user = {
+    fName: "Sahil",
+    lName: "Mistry"
+}
+for (const key in user) {
+    console.log(key);
+}
+/* console will print key present in object
+ fName 
+ lName */
+
+console.log(user.propertyIsEnumerable("constructor"));  // false
+console.log(user.propertyIsEnumerable("__proto__")); // false
+console.log(user.propertyIsEnumerable("fName")); // true
+console.log(user.propertyIsEnumerable("lName")); // true
+
+Object.defineProperty(user, 'age', {
+    value: 21,
+    enumerable: false
+});
+for (const key in user) {
+    console.log(key);
+}
