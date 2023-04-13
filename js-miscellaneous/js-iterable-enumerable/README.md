@@ -23,7 +23,6 @@
 * How the  **Iterator object** would look is given below.
     ```
     const iteratorObjectProtocol = {
-        return {
             next() {
                 if(// condition) {
                     return {
@@ -37,7 +36,6 @@
                     done: true or false
                 }
             }
-        }
     }
     ```    
 * **Check wether an object is iterable or not**
